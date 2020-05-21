@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>KALPATARU-marriage-hall</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static',filename='assets/img/favicon.png') }}" rel="icon">
+  <link href="{{ url_for('static',filename='assets/img/favicon.png') }}" rel="icon">
+  <link href="{{ url_for('static',filename='assets/img/favicon.png') }}" rel="icon">
+  <link href="{{ url_for('static',filename='assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static',filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static',filename='assets/vendor/icofont/icofont.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static',filename='assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static',filename='assets/vendor/animate.css/animate.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static',filename='assets/vendor/venobox/venobox.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static',filename='assets/vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static',filename='assets/css/style.css') }}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Delicious - v2.0.0
+  * Template URL: https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+
+<!-- ======= Book A Table Section ======= -->
+    <section id="book-a-table" class="book-a-table">
+      <div class="container">
+
+        <div class="section-title">
+
+                    <h1>Basic Action</h1>
+<a href="/dashboard"><button class="btn btn-primary">Dashboard Home</button></a>
+<a href="/logout"><button class="btn btn-primary">Logout</button></a>
+<hr>
+ 
+          <h2>Edit <span>Booking</span></h2>
+          
+        </div>
+
+        <form action="/edit/{{post.sno}}" method="post" role="form" class="php-email-form">
+          <div class="form-row">
+            <div class="col-lg-4 col-md-6 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" value="{{post.name}}">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" value="{{post.email}}">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group">
+              <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars" value="{{post.phone}}">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group">
+              <input type="text" class="form-control" name="paid" id="paid" placeholder="Paid Amount" data-rule="minlen:4" data-msg="Please enter at least 4 chars" value="{{post.paid}}">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group">
+              <input type="text" class="form-control" name="remain" id="remain" placeholder="Remaining amount" data-rule="minlen:4" data-msg="Please enter at least 4 chars" value="{{post.remain}}">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group">
+              <input type="date" name="date" class="form-control" id="date" placeholder="Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars" value="{{post.date}}">
+              <div class="validate"></div>
+            </div>
+            
+          </div>
+          <div class="form-group">
+            <input class="form-control" name="occassion" rows="5" placeholder="occassion" value="{{post.occassion}}">
+            <div class="validate"></div>
+          </div>
+          <div class="form-group">
+            <input class="form-control" name="message" rows="5" placeholder="Message" value="{{post.message}}">
+            <div class="validate"></div>
+          </div>
+          
+          <div class="text-center"><button type="submit">Confirm</button></div>
+        </form>
+
+      </div>
+    </section><!-- End Book A Table Section -->
+
+
+
